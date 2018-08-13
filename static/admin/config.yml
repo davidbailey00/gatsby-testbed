@@ -6,10 +6,10 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
+  - name: posts
     label: Amazing Pandas Eating Things
     label_singular: Post
-    folder: src/pages
+    folder: static/posts
     create: true
     fields:
       - { name: title, label: Title }
