@@ -1,10 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Head from "../components/head"
 import indexStyles from "../scss/index.module.scss"
 
 export default ({ data }) => (
   <Layout>
+    <Head title="Home" />
     <h1 className={indexStyles.header}>Amazing Pandas Eating Things</h1>
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
     {data.allMarkdownRemark.edges.map(({ node }) => (

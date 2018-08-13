@@ -1,12 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Head from "../components/head"
 import blogPostStyles from "../scss/blog-post.module.scss"
 
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
+      <Head title={post.frontmatter.title} />
       <h1>{post.frontmatter.title}</h1>
       <h4 className={blogPostStyles.date}>{post.frontmatter.date}</h4>
       <div className={blogPostStyles.body} dangerouslySetInnerHTML={{ __html: post.html }} />
