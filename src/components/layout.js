@@ -1,26 +1,8 @@
 import React from "react"
-import Radium from "radium"
 import { StaticQuery, Link, graphql } from "gatsby"
+import layoutStyles from "../scss/layout.module.scss"
 
-import { rhythm } from "../utils/typography"
-
-const styles = {
-  layout: {
-    margin: `0 auto`,
-    maxWidth: `700px`,
-    padding: `${rhythm(1.5)} ${rhythm(2)} ${rhythm(2)}`,
-  },
-  title: {
-    marginBottom: rhythm(2),
-    display: `inline-block`,
-    fontStyle: `normal`,
-  },
-  about: {
-    float: `right`,
-  },
-}
-
-const Layout = ({ children }) => (
+export default ({ children }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -32,11 +14,11 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div style={styles.layout}>
+      <div className={layoutStyles.layout}>
         <Link to="/">
-          <h3 style={styles.title}>{data.site.siteMetadata.title}</h3>
+          <h3 className={layoutStyles.title}>{data.site.siteMetadata.title}</h3>
         </Link>
-        <Link to="/about/" style={styles.about}>
+        <Link to="/about/" className={layoutStyles.about}>
           About
         </Link>
         {children}
@@ -44,5 +26,3 @@ const Layout = ({ children }) => (
     )}
   />
 )
-
-export default Radium(Layout)

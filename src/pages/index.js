@@ -1,36 +1,18 @@
 import React from "react"
-import Radium from "radium"
 import { Link, graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
+import indexStyles from "../scss/index.module.scss"
 
-const styles = {
-  header: {
-    display: `inline-block`,
-    borderBottom: `1px solid`,
-  },
-  articleTitle: {
-    marginBottom: rhythm(1 / 4),
-  },
-  date: {
-    color: `#bbb`,
-  },
-  link: {
-    textDecoration: `none`,
-    color: `inherit`,
-  },
-}
-
-const Index = ({ data }) => (
+export default ({ data }) => (
   <Layout>
-    <h1 style={styles.header}>Amazing Pandas Eating Things</h1>
+    <h1 className={indexStyles.header}>Amazing Pandas Eating Things</h1>
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id}>
-        <Link to={node.fields.slug} style={styles.link}>
-          <h3 style={styles.articleTitle}>
+        <Link to={node.fields.slug} className={indexStyles.link}>
+          <h3 className={indexStyles.articleTitle}>
             {node.frontmatter.title}
-            <span style={styles.date}> — {node.frontmatter.date}</span>
+            <span className={indexStyles.date}> — {node.frontmatter.date}</span>
           </h3>
           <p>{node.excerpt}</p>
         </Link>
@@ -38,8 +20,6 @@ const Index = ({ data }) => (
     ))}
   </Layout>
 )
-
-export default Radium(Index)
 
 export const query = graphql`
   query {

@@ -1,26 +1,18 @@
 import React from "react"
-import Radium from "radium"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import blogPostStyles from "../scss/blog-post.module.scss"
 
-const styles = {
-  date: {
-    color: `#bbb`,
-  },
-}
-
-const BlogPost = ({ data }) => {
+export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
       <h1>{post.frontmatter.title}</h1>
-      <h4 style={styles.date}>{post.frontmatter.date}</h4>
+      <h4 className={blogPostStyles.date}>{post.frontmatter.date}</h4>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
 }
-
-export default Radium(BlogPost)
 
 export const query = graphql`
   query($slug: String!) {

@@ -1,0 +1,19 @@
+@import "rhythm";
+
+.header {
+  display: inline-block;
+  border-bottom: 1px solid;
+}
+
+.articleTitle {
+  margin-bottom: rhythm(1/4);
+}
+
+.date {
+  color: #bbb;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
