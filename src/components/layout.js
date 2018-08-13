@@ -1,6 +1,6 @@
 import React from "react"
 import Radium from "radium"
-import { Link } from "gatsby"
+import { StaticQuery, Link, graphql } from "gatsby"
 
 import { rhythm } from "../utils/typography"
 
@@ -20,16 +20,29 @@ const styles = {
   },
 }
 
-const Layout = props => (
-  <div style={styles.layout}>
-    <Link to="/">
-      <h3 style={styles.title}>{props.title}</h3>
-    </Link>
-    <Link to="/about/" style={styles.about}>
-      About
-    </Link>
-    {props.children}
-  </div>
+const Layout = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    render={data => (
+      <div style={styles.layout}>
+        <Link to="/">
+          <h3 style={styles.title}>{data.site.siteMetadata.title}</h3>
+        </Link>
+        <Link to="/about/" style={styles.about}>
+          About
+        </Link>
+        {children}
+      </div>
+    )}
+  />
 )
 
 export default Radium(Layout)

@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default ({ data }) => (
-  <Layout title={data.site.siteMetadata.title}>
+  <Layout>
     <h1>My Site's Files</h1>
     <table>
       <thead>
@@ -38,11 +38,6 @@ export const query = graphql`
           extension
           birthTime(fromNow: true)
         }
-      }
-    }
-    site {
-      siteMetadata {
-        title
       }
     }
   }

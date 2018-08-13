@@ -18,7 +18,7 @@ const styles = {
 }
 
 const Index = ({ data }) => (
-  <Layout title={data.site.siteMetadata.title}>
+  <Layout>
     <h1 style={styles.header}>Amazing Pandas Eating Things</h1>
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
     {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -37,11 +37,6 @@ export default Radium(Index)
 
 export const query = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
