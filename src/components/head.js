@@ -15,6 +15,7 @@ export default props => (
     `}
     render={data => (
       <Helmet>
+        <html lang="en" />
         <meta charSet="utf-8" />
         <title>{props.title} — {data.site.siteMetadata.title}</title>
       </Helmet>
