@@ -7,8 +7,9 @@
 .body {
   iframe {
     width: calc(100vw - #{rhythm(4)});
-    max-width: 700px;
     height: calc((9 / 16) * (100vw - #{rhythm(4)}));
-    max-height: (9 / 16) * 700px;
+
+    max-width: calc(700px - #{rhythm(4)});
+    max-height: calc((9 / 16) * (700px - #{rhythm(4)}));
   }
 }
