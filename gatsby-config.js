@@ -19,5 +19,17 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Pandas Eating Lots",
+        short_name: "Pandas Eating Lots",
+        start_url: "/",
+        background_color: "#6b37bf",
+        theme_color: "#6b37bf",
+        display: "minimal-ui",
+        icon: "static/assets/icon.png",
+      },
+    },
   ],
 }
