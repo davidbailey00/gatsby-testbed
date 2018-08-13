@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: davidbailey00/gatsby-tutorial
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: blog
+    label: Amazing Pandas Eating Things
+    label_singular: Post
+    folder: src/pages
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: Date, widget: date }
+      - { name: body, label: Body, widget: markdown }
