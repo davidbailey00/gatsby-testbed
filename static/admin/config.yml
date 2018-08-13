@@ -9,7 +9,7 @@ collections:
   - name: posts
     label: Amazing Pandas Eating Things
     label_singular: Post
-    folder: static/posts
+    folder: src/pages
     create: true
     fields:
       - { name: title, label: Title }
