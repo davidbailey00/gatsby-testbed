@@ -20,6 +20,12 @@ export default ({ data }) => (
         </Link>
       </div>
     ))}
+    <p>
+      <Link to="/invalid-page/">404 link for testing</Link>
+    </p>
+    <p>
+      <Link to="/invalid-page/?somequery=2">404 with query string</Link>
+    </p>
   </Layout>
 )
 

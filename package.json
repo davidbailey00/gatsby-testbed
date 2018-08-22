@@ -8,14 +8,14 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "gatsby": "next",
-    "gatsby-plugin-manifest": "^1.0.27",
-    "gatsby-plugin-netlify-cms": "^3.0.0-beta.4",
-    "gatsby-plugin-offline": "^2.0.0-beta.9",
-    "gatsby-plugin-react-helmet": "^2.0.11",
-    "gatsby-plugin-sass": "^2.0.0-beta.10",
-    "gatsby-plugin-typography": "^1.7.19",
-    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby": "^2.0.0-rc.0",
+    "gatsby-plugin-manifest": "^2.0.2-rc.0",
+    "gatsby-plugin-netlify-cms": "^3.0.0-rc.0",
+    "gatsby-plugin-offline": "^2.0.0-rc.0",
+    "gatsby-plugin-react-helmet": "^3.0.0-rc.0",
+    "gatsby-plugin-sass": "^2.0.0-rc.0",
+    "gatsby-plugin-typography": "^2.2.0-rc.0",
+    "gatsby-source-filesystem": "^2.0.1-rc.0",
     "gatsby-transformer-remark": "^1.7.44",
     "netlify-cms": "^2.0.9",
     "node-sass": "^4.9.3",
@@ -23,6 +23,7 @@
     "react-dom": "^16.3.2",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.13",
+    "replace-in-file": "^3.4.2",
     "typography": "^0.16.17",
     "typography-theme-kirkham": "^0.16.3"
   }
