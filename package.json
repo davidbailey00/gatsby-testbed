@@ -25,6 +25,7 @@
     "react-typography": "^0.16.13",
     "replace-in-file": "^3.4.2",
     "typography": "^0.16.17",
-    "typography-theme-kirkham": "^0.16.3"
+    "typography-theme-kirkham": "^0.16.3",
+    "workbox-build": "^3.4.1"
   }
 }
