@@ -26,6 +26,9 @@ export default ({ data }) => (
     <p>
       <Link to="/invalid-page/?somequery=2">404 with query string</Link>
     </p>
+    <p>
+      <Link to="/about-test?somequery=5">Mismatching canonical URL</Link>
+    </p>
   </Layout>
 )
 
