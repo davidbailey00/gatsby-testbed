@@ -15,46 +15,60 @@ tests:
   if custom is unavailable, or offline error, but no blank pages
 
   requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
-  passed:   []
+  passed:   [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
 
-- 2) 404s are handled correctly when entering a URL directly - as above
-
-  requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
-  passed:   []
-
-- 3) back button works properly after 404 (navigates to the expected page)
+- 2) 404s are handled correctly when entering a URL directly - as above, and
+  the URL fetched contains the original query parameters (not just no-cache=1)
 
   requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
-  passed:   []
+  passed:   [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
+
+- 3A) back button works properly after internal link 404 (navigates to the
+  expected page)
+
+  requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
+  passed:   [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
+
+- 3B) back button works properly after external link 404 (navigates to the
+  expected page)
+
+  requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
+  passed:   [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
 
 - 4) pages which fail to load display a native offline error (no blank pages)
 
   requires: [3.1, 3.2]
-  passed:   []
+  passed:   [3.1, 3.2]
 
 - 5) the service worker remains installed after a 404/offline error
 
   requires: [3.1, 3.2]
-  passed:   []
+  passed:   [3.1, 3.2]
 
 - 6) Netlify CMS /admin/ loads or displays an offline error (no 404/blank page)
 
   requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
-  passed:   []
+  passed:   [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
 
 - 7) going to a page by entering the URL directly works
 
   requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
-  passed:   []
+  passed:   [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
 
-- 8) clicking the "mismatching canonical URL" link works and goes backwards and
-  forwards correctly (or shows offline)
+- 8) clicking the "mismatching canonical URL" link works with JS, and goes
+  backwards and forwards correctly (or shows offline)
 
-  requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
-  passed:   []
+  requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2]
+  passed:   [1.1, 1.2, 2.1, 2.2, 3.1, 3.2]
 
-- 9) directly entering the mismatching canonical URL works and goes backwards
-  and forwards correctly (or shows offline)
+- 9) directly entering the mismatching canonical URL works with JS, and goes
+  backwards and forwards correctly (or shows offline)
 
-  requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
-  passed:   []
+  requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2]
+  passed:   [1.1, 1.2, 2.1, 2.2, 3.1, 3.2]
+
+- 10) going to a page with a mismatching canonical URL always shows a 404 in
+  development
+
+  requires: [4.1, 4.2]
+  passed:   [4.1, 4.2]
