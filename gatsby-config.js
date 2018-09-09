@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/prefix`,
   siteMetadata: {
     title: `Pandas Eating Lots`,
   },
@@ -32,6 +33,6 @@ module.exports = {
         icon: "static/assets/icon.png",
       },
     },
-    //`gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
