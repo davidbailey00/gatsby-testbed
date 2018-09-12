@@ -29,6 +29,9 @@ export default ({ data }) => (
     <p>
       <Link to="/about-test?somequery=5">Mismatching canonical URL</Link>
     </p>
+    <p>
+      <Link to="/error/">Error testing page</Link>
+    </p>
   </Layout>
 )
 
