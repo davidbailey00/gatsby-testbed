@@ -21,6 +21,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-twitter`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
