@@ -32,6 +32,9 @@ export default ({ data }) => (
     <p>
       <Link to="/error/">Error testing page</Link>
     </p>
+    <p>
+      <Link to="/admin/">Link to Netlify CMS</Link>
+    </p>
   </Layout>
 )
 
