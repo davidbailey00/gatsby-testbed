@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build && cp -r public/about public/about-test",
+    "build": "rm -rf public && gatsby build && cp -r public/about public/about-test && rm public/component---src-pages-missing-resources*",
     "serve": "gatsby serve"
   },
   "dependencies": {

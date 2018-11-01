@@ -11,24 +11,28 @@ configurations:
 
 tests:
 
+>>>CYPRESS COMPLETE
 - 1) 404s are handled correctly from internal links - custom 404 or server 404
   if custom is unavailable, or offline error, but no blank pages
 
   requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
   passed:   [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
 
+>>>CYPRESS COMPLETE
 - 2) 404s are handled correctly when entering a URL directly - as above, and
   the URL fetched contains the original query parameters (not just no-cache=1)
 
   requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
   passed:   [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
 
+>>>CYPRESS COMPLETE
 - 3A) back button works properly after internal link 404 (navigates to the
   expected page)
 
   requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
   passed:   [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
 
+>>>CYPRESS COMPLETE
 - 3B) back button works properly after external link 404 (navigates to the
   expected page)
 
@@ -50,6 +54,7 @@ tests:
   requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
   passed:   [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
 
+>>>CYPRESS COMPLETE
 - 7) going to a page by entering the URL directly works
 
   requires: [1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2]
