@@ -4,9 +4,9 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build && rm -rf public/about-test && cp -r public/about public/about-test && rm public/component---src-pages-missing-resources*",
+    "build": "gatsby build --prefix-paths && rm -rf public/about-test && cp -r public/about public/about-test && rm public/component---src-pages-missing-resources*",
     "fullbuild": "gatsby-dev -sq && rm -rf public .cache && yarn build && yarn serve",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve --prefix-paths"
   },
   "dependencies": {
     "gatsby": "^2.0.0-rc.7",
