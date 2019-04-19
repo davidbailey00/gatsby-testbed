@@ -4,9 +4,9 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build && rm -rf public/about-test && cp -r public/about public/about-test && rm public/component---src-pages-missing-resources*",
+    "build": "gatsby build --prefix-paths && rm -rf public/about-test && cp -r public/about public/about-test && rm public/component---src-pages-missing-resources*",
     "fullbuild": "gatsby-dev -sq && rm -rf public .cache && yarn build && yarn serve",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve --prefix-paths",
     "setup-cdn": "rm -rf public2/prefix && mkdir -p public2/prefix && cp -r public/* public2/prefix/"
   },
   "dependencies": {
